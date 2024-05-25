@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.nav-link {
+    color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #e0e0ff;
+    color: #5a5ac7;
+}
+
+.nav-link.active {
+    background-color: #5a5ac7;
+    color: white;
+}
+
+.nav-link i {
+    margin-right: 10px;
+}
+
+.main-content {
+    background-color: #f8f9fa;
+    border-left: 1px solid #ddd;
+}
+
+.search-bar input {
+    border-radius: 25px;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.logo h2 {
+    margin-bottom: 0; /* Eliminar el espacio inferior del texto */
+    font-size: 1.25rem; /* Tamaño del texto */
+}
+.logo i {
+    font-size: 3rem; /* Tamaño del icono */
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+
+.verification-section {
+    background-color: #f0f0ff;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.verification-section:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.verification-section h1 {
+    font-size: 24px;
+}
+
+.verification-section p {
+    font-size: 18px;
+    color: #777;
+}
+
+.news-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.news-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.news-card .card-title {
+    margin-bottom: 10px;
+}
+
+.news-card .card-text {
+    margin-bottom: 10px;
+}
+
+.news-card span {
+    color: #777;
+}
+
+.social-media a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #333;
+}
+
+.social-media i {
+    margin-right: 10px;
+}
+
+.btn-danger {
+    background-color: #ff4b5c;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.btn-danger:hover {
+    background-color: #ff2d3a;
+}

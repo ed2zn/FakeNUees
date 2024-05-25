@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+/* Estilos generales */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Estilos específicos para la página de login y análisis de noticias */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.login {
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.login h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: none;
+}
+
+textarea:focus {
+  border-color: #4a77d4;
+  outline: none;
+  box-shadow: 0 0 8px rgba(74, 119, 212, 0.2);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #5252d3;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #5a5ac7;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.results h2 {
+  margin-top: 20px;
+}
+
+.false {
+  color: red;
+}
+
+.true {
+  color: green;
+}
+
+.message {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  text-align: left;
+}
+
+/* Estilos para la nueva interfaz de verificación de noticias */
+.sidebar {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav-link {
+    color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #e0e0ff;
+    color: #5a5ac7;
+}
+
+.nav-link.active {
+    background-color: #5a5ac7;
+    color: white;
+}
+
+.nav-link i {
+    margin-right: 10px;
+}
+
+.main-content {
+    background-color: #f8f9fa;
+    border-left: 1px solid #ddd;
+}
+
+.search-bar input {
+    border-radius: 25px;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.verification-section {
+    background-color: #f0f0ff;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+.verification-section:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.verification-section h1 {
+    font-size: 24px;
+}
+
+.verification-section p {
+    font-size: 18px;
+    color: #777;
+}
+
+.news-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.news-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.news-card .card-title {
+    margin-bottom: 10px;
+}
+
+.news-card .card-text {
+    margin-bottom: 10px;
+}
+
+.news-card span {
+    color: #777;
+}
+
+.social-media a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #333;
+}
+
+.social-media i {
+    margin-right: 10px;
+}
+
+.btn-danger {
+    background-color: #ff4b5c;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.btn-danger:hover {
+    background-color: #ff2d3a;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 16px;
+  background-color: #5252d3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background-color: #5a5ac7;
+}
