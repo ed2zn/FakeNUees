@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Detección de noticias falsas</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <a href="{{ url_for('home') }}" class="back-button">← Volver a noticias</a>
+    <div class="login">
+      <h1>Detector de noticias falsas📰</h1>
+      <form action="{{ url_for('predict') }}" method="POST">
+        <textarea name="message" rows="6" cols="50" required="required"></textarea>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Analizar</button>
+        <div class="results">
+          {% if prediction %}
+            <h2 class="{{ 'false' if prediction == 'FALSO' else 'true' }}">
+              {{ prediction == 'FALSO' and 'Parece una noticia falsa⚠️📰' or 'Parece una noticia real📰' }}
+            </h2>
+            <p class="message">{{ message }}</p>
+          {% endif %}
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
