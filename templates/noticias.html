@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Noticias</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_noticias.css') }}">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-md-3 col-lg-2 p-0 bg-light sidebar d-flex flex-column">
+                <div class="pt-3">
+                    <div class="logo mb-4">
+                        <i class="fas fa-newspaper"></i>
+                        
+                    </div>
+                    <nav class="nav flex-column w-100">
+                        <a class="nav-link active" href="#"><i class="fas fa-home"></i> Inicio</a>
+                        <a class="nav-link" href="{{ url_for('noticias') }}"><i class="fas fa-newspaper"></i> Verificar noticia</a>
+                        <a class="nav-link" href="#"><i class="fas fa-bell"></i> Notificación</a>
+                        <a class="nav-link" href="#"><i class="fas fa-question-circle"></i> Preguntas</a>
+                        <a class="nav-link" href="#"><i class="fas fa-cog"></i> Configuraciones</a>
+                    </nav>
+                </div>
+                <div class="mt-auto">
+                    <div class="mt-auto mb-3 w-100 text-center">
+                        <a class="d-block mb-2" href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a class="d-block" href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                    </div>
+                    <button class="btn btn-danger w-100">Cerrar sesión</button> <!-- Botón "Cerrar sesión" -->
+                </div>
+            </aside>
+            <main class="col-md-9 col-lg-10 main-content py-4">
+                <div class="container">
+                    <div class="search-bar mb-4">
+                        <input type="text" class="form-control" placeholder="Ingresar el link de la noticia">
+                    </div>
+                    <div class="verification-section text-center mb-4 clickable">
+                        <i class="fas fa-search"></i>
+                        <h1>¿Quieres corroborar alguna noticia?</h1>
+                        <p>¡Verifica tu noticia ahora!</p>
+                    </div>
+                    <div class="news-section">
+                        <h2 class="font-weight-bold">Últimas noticias</h2>
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="card news-card">
+                                    <img src="{{ url_for('static', filename='mbappe.jpg') }}" class="card-img-top" alt="Noticia 1">
+                                    <div class="card-body">
+                                        <h5 class="font-weight-bold">Falso</h5>
+                                        <p class="card-text">Mbappe rechazó al Aguila luego de varias semanas de conversaciones.</p>
+                                        <span class="text-muted">34 min</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card news-card">
+                                    <img src="{{ url_for('static', filename='srm.jpg') }}" class="card-img-top" alt="Noticia 2">
+                                    <div class="card-body">
+                                        <h5 class="font-weight-bold">Falso</h5>
+                                        <p class="card-text">La Sonora Dinamita tocará en la final de la Champions League.</p>
+                                        <span class="text-muted">46 min</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card news-card">
+                                    <img src="{{ url_for('static', filename='buki.jpeg') }}" class="card-img-top" alt="Noticia 3">
+                                    <div class="card-body">
+                                        <h5 class="font-weight-bold">Verídica</h5>
+                                        <p class="card-text">Marco Antonio Solis hizo un nuevo concierto en El Salvador.</p>
+                                        <span class="text-muted">53 min</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
